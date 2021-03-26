@@ -72,9 +72,11 @@ function draw() {
   background(0);
 
   
- 
+  
   packageSprite.x= packageBody.position.x 
   packageSprite.y= packageBody.position.y 
+
+  
   
 
   //keyPressed()
@@ -92,6 +94,6 @@ function keyPressed(){
 		helicopterSprite.x = helicopterSprite.x - 20;
 	}
 	if(keyCode===DOWN_ARROW){
-		packageBody.position.y = packageBody.position.y + 20;
+		Matter.Body.setStatic(packageBody,false);
 	}
 }
